@@ -1,7 +1,7 @@
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 const handler = async (event) => {
   const paymentIntent = await stripe.paymentIntents.create({
-    amount: 1099,
+    amount: 2299,
     currency: "usd",
     metadata: { integration_check: "accept_a_payment" },
   });
