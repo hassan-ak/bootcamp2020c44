@@ -1,0 +1,30 @@
+.StripeElementDiv {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  width: auto;
+}
+.StripeElement {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+.cardElement {
+  background-color: tomato;
+  padding: 20px;
+}
+
+.payButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+}
