@@ -3,7 +3,8 @@ const handler = async (event) => {
   const paymentIntent = await stripe.paymentIntents.create({
     amount: 2299,
     currency: "usd",
-    metadata: { integration_check: "accept_a_payment" },
+    // metadata: { integration_check: "accept_a_payment" },
+    metadata: { customerId: "34343", orderId: "343434" },
   });
   try {
     return {
