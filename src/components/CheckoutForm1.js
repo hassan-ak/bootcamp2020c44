@@ -1,11 +1,4 @@
-import {
-  // CardElement,
-  useStripe,
-  useElements,
-  CardNumberElement,
-  CardExpiryElement,
-  CardCvcElement,
-} from "@stripe/react-stripe-js";
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import React from "react";
 import "./checkoutForm.css";
 
@@ -28,10 +21,10 @@ const CARD_ELEMENT_OPTIONS = {
   },
 };
 
-export const CheckoutForm = () => {
+export const CheckoutForm1 = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const multipleElementPay = async () => {
+  const cardElementPay = async () => {
     const response = await fetch("/.netlify/functions/checkout", {
       method: "post",
     });
@@ -40,7 +33,7 @@ export const CheckoutForm = () => {
 
     const result = await stripe.confirmCardPayment(data.client_secret, {
       payment_method: {
-        card: elements.getElement(CardNumberElement),
+        card: elements.getElement(CardElement),
         billing_details: {
           name: "Zubair Hafeez",
           email: "abc@gmail.com",
@@ -56,15 +49,13 @@ export const CheckoutForm = () => {
       <hr />
       <div className='StripeElementDiv'>
         <div>
-          <h2>Stripe Multiple Elements</h2>
-          <div className='cardElement'>
-            <CardNumberElement options={CARD_ELEMENT_OPTIONS} />
-            <CardExpiryElement options={CARD_ELEMENT_OPTIONS} />
-            <CardCvcElement options={CARD_ELEMENT_OPTIONS} />
-          </div>
-          <div className='payButton'>
-            <button onClick={multipleElementPay}>Pay</button>
-          </div>
+          <h2>Stripe Card Element</h2>
+        </div>
+        <div className='cardElement'>
+          <CardElement options={CARD_ELEMENT_OPTIONS} />
+        </div>
+        <div className='payButton'>
+          <button onClick={cardElementPay}>Pay</button>
         </div>
       </div>
     </div>
