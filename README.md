@@ -13,3 +13,7 @@
 - [Netlify Functions Example](https://github.com/alexmacarthur/netlify-lambda-function-example/blob/68a0cdc05e201d68fe80b0926b0af7ff88f15802/lambda-src/purchase.js#L43)
 - [Using Stripe in React Notes](https://nancyhuynh-til.netlify.app/stripe-react-notes/)
 - [Stripe Custom Payment Flow](https://stripe.com/docs/payments/integration-builder)
+
+### Links
+
+- Video Lectures [Link1](https://www.youtube.com/watch?v=tamOJxju7fg&ab_channel=PanacloudServerlessSaaSTraining) [Link2](https://www.facebook.com/zeeshanhanif/videos/10224918482854198/) [Link3](https://www.youtube.com/watch?v=vzeLykEV87w&ab_channel=PanacloudServerlessSaaSTraininginUrdu) [Link4](https://www.facebook.com/zeeshanhanif/videos/10224927228272828/)
